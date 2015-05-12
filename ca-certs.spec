@@ -5,8 +5,7 @@ License:        MPL-2.0 GPL-2.0
 Summary:        System CA Certificates
 Url:            https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 Group:          base
-# From Mozilla MPL-2.0
-# curl -o certdata.txt http://mxr.mozilla.org/mozilla-central/source/security/nss/lib/ckfw/builtins/certdata.txt?raw=1
+# From Mozilla MPL-2.0, $ make update
 Source0:        certdata.txt
 # From Debian ca-certificates package GPL-2.0
 Source1:        certdata2pem.py
