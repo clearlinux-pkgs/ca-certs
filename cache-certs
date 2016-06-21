@@ -1,0 +1,12 @@
+#!/bin/bash
+
+export SOURCE=$1
+export P11_TRUST_PATHS=$2
+
+echo SOURCE=$SOURCE
+echo P11_TRUST_PATHS=$P11_TRUST_PATHS
+mkdir -p $P11_TRUST_PATHS/extracted/java
+mkdir -p $P11_TRUST_PATHS/extracted/openssl
+mkdir -p $P11_TRUST_PATHS/extracted/pem
+
+find $SOURCE -type f -name \*.crt | xargs -n1 trust anchor
