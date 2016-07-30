@@ -1,6 +1,6 @@
 Name:           ca-certs
 Version:        2.4
-Release:        19
+Release:        20
 License:        MPL-2.0 GPL-2.0
 Summary:        System CA Certificates
 Url:            https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
@@ -35,17 +35,17 @@ rm cache-certs
 popd
 
 %install
-mkdir -p %{buildroot}%{_datadir}/
-cp -a build/ %{buildroot}%{_datadir}/ca-certs/
-mkdir -p %{buildroot}%{_datadir}/ca-certs/cache
+mkdir -p %{buildroot}/usr/share/
+cp -a build/ %{buildroot}/usr/share/ca-certs/
+mkdir -p %{buildroot}/usr/share/ca-certs/cache
 
 %files
-%{_datadir}/ca-certs/*.crt
-%{_datadir}/ca-certs/*.0
-%{_datadir}/ca-certs/*.1
-%{_datadir}/ca-certs/cache/*.p11-kit
-%{_datadir}/ca-certs/cache/extracted/openssl/ca-bundle.trust.pem
-%{_datadir}/ca-certs/cache/extracted/pem/tls-ca-bundle.pem
-%{_datadir}/ca-certs/cache/extracted/pem/email-ca-bundle.pem
-%{_datadir}/ca-certs/cache/extracted/pem/objsign-ca-bundle.pem
-%{_datadir}/ca-certs/cache/extracted/java/cacerts
+/usr/share/ca-certs/*.crt
+/usr/share/ca-certs/*.0
+/usr/share/ca-certs/*.1
+/usr/share/ca-certs/cache/*.p11-kit
+/usr/share/ca-certs/cache/extracted/openssl/ca-bundle.trust.pem
+/usr/share/ca-certs/cache/extracted/pem/tls-ca-bundle.pem
+/usr/share/ca-certs/cache/extracted/pem/email-ca-bundle.pem
+/usr/share/ca-certs/cache/extracted/pem/objsign-ca-bundle.pem
+/usr/share/ca-certs/cache/extracted/java/cacerts
