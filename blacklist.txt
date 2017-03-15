@@ -5,9 +5,3 @@
 
 # DigiNotar Root CA (see debbug#639744)
 "DigiNotar Root CA"
-
-# https://bugzilla.mozilla.org/show_bug.cgi?id=1272158
-"Root CA Generalitat Valenciana"
-
-# https://bugzilla.mozilla.org/show_bug.cgi?id=1266574
-"Buypass Class 2 CA 1"
