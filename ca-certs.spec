@@ -1,6 +1,6 @@
 Name:           ca-certs
 Version:        2.4
-Release:        25
+Release:        26
 License:        MPL-2.0 GPL-2.0
 Summary:        System CA Certificates
 Url:            https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
@@ -25,6 +25,11 @@ rm -rf *
 cp %{SOURCE0} %{SOURCE1} %{SOURCE2} .
 python %{SOURCE1}
 rm %{SOURCE0} %{SOURCE1} %{SOURCE2}
+# make sure clrtrust is capable of generating a trust store out of theses
+mkdir -p clr_src/trusted clr_store
+cp *.crt clr_src/trusted
+CLR_TRUST_STORE=clr_store CLR_CLEAR_TRUST_SRC=clr_src clrtrust generate
+rm -rf clr_src clr_store
 
 %install
 mkdir -p %{buildroot}/usr/share/ca-certs/trusted
