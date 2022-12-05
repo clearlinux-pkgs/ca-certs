@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e -o pipefail
 
-curl -q -o certdata.txt https://hg.mozilla.org/mozilla-central/raw-file/tip/security/nss/lib/ckfw/builtins/certdata.txt
+curl -sSf -o certdata.txt https://hg.mozilla.org/mozilla-central/raw-file/tip/security/nss/lib/ckfw/builtins/certdata.txt
 git diff --exit-code && exit
 
 make bumpnogit
