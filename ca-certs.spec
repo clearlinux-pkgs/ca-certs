@@ -1,6 +1,6 @@
 Name:           ca-certs
 Version:        2.4
-Release:        59
+Release:        60
 License:        MPL-2.0 GPL-2.0
 Summary:        System CA Certificates
 Url:            https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
