@@ -13,6 +13,7 @@ Source2:        blacklist.txt
 Source4:        dynamic-trust-store.service
 Requires:       p11-kit
 Requires:       clrtrust
+BuildRequires:  clrtrust
 BuildRequires:  python3-core
 Provides:       ca-certificates
 
